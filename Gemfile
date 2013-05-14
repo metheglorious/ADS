@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
-
+gem 'devise'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
@@ -21,6 +21,7 @@ group :assets do
 end
 group :development do
   gem 'rspec-rails', '2.6.1'
+  gem 'annotate'
 end
 
 group :test do
