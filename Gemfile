@@ -26,7 +26,8 @@ end
 
 group :test do
   gem 'rspec-rails', '2.6.1'
-  gem 'webrat', '0.7.1'
+  #gem 'webrat', '0.7.1'
+  gem 'turnip'
 end
 gem 'jquery-rails'
 
