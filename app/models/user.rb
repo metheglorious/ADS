@@ -9,6 +9,9 @@
 #  updated_at :datetime         not null
 #
 
+
+scope :published, -> { where('published_on <= ?', Time.now.to_date) }
+
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
