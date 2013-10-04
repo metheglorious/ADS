@@ -7,7 +7,7 @@ MyApp::Application.routes.draw do
     get '/signup',  to: 'devise/registrations#new'
     get "/signin", :to => "devise/sessions#new"
   end
-  get '/signout', to: 'users#destroy', via: :delete
+  delete '/signout', to: 'users#destroy'
   get '/help',    to: 'pages#help'
   get '/about',   to: 'pages#about'
   get '/contact', to: 'pages#contact'
