@@ -134,6 +134,9 @@ GEM
       multi_json (~> 1.0)
       rubyzip (< 1.0.0)
       websocket (~> 1.0.4)
+    simple_form (3.0.0)
+      actionpack (>= 4.0.0, < 4.1)
+      activemodel (>= 4.0.0, < 4.1)
     sprockets (2.10.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -186,6 +189,7 @@ DEPENDENCIES
   rspec-rails
   sass-rails
   selenium-webdriver
+  simple_form
   sqlite3
   therubyracer
   turnip

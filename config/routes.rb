@@ -1,9 +1,13 @@
 MyApp::Application.routes.draw do
   resources :users
   root to: 'pages#home'
-
-  get '/signup',  to: 'users#new'
-
+  devise_for :users
+  
+  devise_scope :user do
+    get '/signup',  to: 'devise/registrations#new'
+    get "/signin", :to => "devise/sessions#new"
+  end
+  get '/signout', to: 'users#destroy', via: :delete
   get '/help',    to: 'pages#help'
   get '/about',   to: 'pages#about'
   get '/contact', to: 'pages#contact'
