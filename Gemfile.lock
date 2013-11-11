@@ -36,7 +36,10 @@ GEM
     bcrypt-ruby (3.1.2)
     bootstrap-sass (2.3.2.2)
       sass (~> 3.2)
+    bootstrap-will_paginate (0.0.10)
+      will_paginate
     builder (3.1.4)
+    cancan (1.6.10)
     capybara (2.1.0)
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
@@ -59,6 +62,8 @@ GEM
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
     diff-lcs (1.2.4)
+    enumerize (0.7.0)
+      activesupport (>= 3.2)
     erubis (2.7.0)
     execjs (2.0.2)
     factory_girl (4.2.0)
@@ -86,8 +91,6 @@ GEM
       mini_portile (~> 0.5.0)
     orm_adapter (0.4.0)
     polyglot (0.3.3)
-    protected_attributes (1.0.3)
-      activemodel (>= 4.0.0, < 5.0)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -167,6 +170,7 @@ GEM
     warden (1.2.3)
       rack (>= 1.0)
     websocket (1.0.7)
+    will_paginate (3.0.5)
     xpath (2.0.0)
       nokogiri (~> 1.3)
 
@@ -178,12 +182,14 @@ DEPENDENCIES
   actionpack-page_caching
   annotate
   bootstrap-sass
+  bootstrap-will_paginate
+  cancan
   capybara
   coffee-rails
   devise
+  enumerize
   factory_girl_rails
   jquery-rails
-  protected_attributes
   rails (= 4.0.0)
   rails-observers
   rspec-rails
@@ -194,3 +200,4 @@ DEPENDENCIES
   therubyracer
   turnip
   uglifier
+  will_paginate

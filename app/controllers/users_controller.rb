@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
-
+  #before_filter :authenticate_user!
+  #load_and_authorize_resource
+  
   def show
     @user = User.find(params[:id])
   end
@@ -9,7 +11,7 @@ class UsersController < ApplicationController
   end
 
     def create
-    @user = User.new(params[:user])
+    @user = User.new(user_params)
     if @user.save
       sign_in @user
       flash[:success] = "Welcome to the Sample App!"
@@ -20,10 +22,19 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    sign_out
-    redirect_to root_url
+    @user.delete
+    redirect_to root_path
   end
 
+  def signout
+    sign_out
+    redirect_to root_path
+  end
+  
+  def index
+    @users = User.paginate(page: params[:page])
+  end
+  
   private
 
     def user_params

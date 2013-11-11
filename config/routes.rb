@@ -5,9 +5,10 @@ MyApp::Application.routes.draw do
   
   devise_scope :user do
     get '/signup',  to: 'devise/registrations#new'
-    get "/signin", :to => "devise/sessions#new"
+    get '/signin', to: 'devise/sessions#new'
+    get '/edit', to: 'devise/registrations#edit'
   end
-  delete '/signout', to: 'users#destroy'
+  delete '/signout', to: 'users#signout'
   get '/help',    to: 'pages#help'
   get '/about',   to: 'pages#about'
   get '/contact', to: 'pages#contact'
